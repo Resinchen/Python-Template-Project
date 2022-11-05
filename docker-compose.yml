@@ -1,0 +1,11 @@
+version: "3.6"
+
+services:
+  db:
+    image: postgres:11.6
+    command: postgres -c fsync=${FSYNC:-off} -c max_connections=200
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432

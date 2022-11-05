@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "templateproject"
+version = "0.1.0"
+description = "The template for python project"
+authors = ["Resinchen <alex1410alex@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+project = 'projectName.cli:main_app'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.6.1"
+pydantic = "^1.10.2"
+sqlalchemy = "^1.4.43"
+alembic = "^1.8.1"
+sqlalchemy-utils = "^0.38.3"
+click = "^8.1.3"
+psycopg2-binary = "^2.9.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+isort = "^5.10.1"
+unify = "^0.5"
+mypy = "^0.982"
+flake8 = "^5.0.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
